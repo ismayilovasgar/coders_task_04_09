@@ -1,3 +1,4 @@
+let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
 const container = document.createElement("div");
 const mycontainer = document.createElement("div");
 mycontainer.classList.add("mycontainer");
@@ -18,7 +19,6 @@ btn_axtar.addEventListener("click", () => {
   fillMoney(miqdar2);
 });
 
-let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
 function setCountMoney(input_value) {
   let miqdar = [];
   let k;
