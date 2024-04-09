@@ -8,18 +8,17 @@
 .container {
   width: 1200px;
   max-width: 90%;
-  margin: 0 auto;
-  border: 1px solid green;
+  margin: 40px auto;
 }
 
 input {
   display: inline-block;
   margin: 10px 20px;
-  height: 25px;
-  width: 200px;
+  height: 35px;
+  width: 240px;
 }
 button {
-  height: 25px;
+  height: 35px;
   width: 100px;
 }
 
@@ -29,6 +28,7 @@ button {
   position: relative;
   margin: 40px 20px;
   outline: 2px solid rgba(31, 8, 8, 0.2);
+  background-color: rgb(158, 198, 199);
 }
 img {
   position: absolute;
@@ -36,12 +36,10 @@ img {
   height: 250px;
   top: 0px;
 }
-.item-1 {
-  left: 0px;
-}
-.item-2 {
-  left: 40px;
-}
-.item-3 {
-  left: 80px;
+.label {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  bottom: 10%;
+  right: 10%;
 }

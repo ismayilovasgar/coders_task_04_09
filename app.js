@@ -43,14 +43,20 @@ function fillMoney(miqdar2) {
   let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
 
   miqdar2.map((value, index) => {
-    const board = document.createElement("div");
-    mycontainer.append(board);
-    for (let j = 1; j <= value; j++) {
-      board.classList.add("board");
-      const img = document.createElement("img");
-      img.src = `./images/${pullar[index]}.jpg`;
-      img.style.left = `${10 * j}px`;
-      board.append(img);
+    if (value !== 0) {
+      const board = document.createElement("div");
+      mycontainer.append(board);
+      for (let j = 1; j <= value; j++) {
+        board.classList.add("board");
+        const img = document.createElement("img");
+        img.src = `./images/${pullar[index]}.jpg`;
+        img.style.left = `${10 * j}px`;
+        board.append(img);
+      }
+      const label = document.createElement("p");
+      label.classList.add("label");
+      label.innerHTML = `${value} X`;
+      board.append(label);
     }
   });
 }
