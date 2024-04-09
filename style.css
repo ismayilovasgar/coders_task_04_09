@@ -5,28 +5,35 @@
   text-decoration: none;
   list-style: none;
 }
-body{
-  background-color: rgb(211, 152, 164);
+body {
+  background-color: rgba(5, 69, 71, 0.562);
 }
 .container {
   width: 1200px;
   max-width: 90%;
   margin: 40px auto;
 }
-.mycontainer{
-  background-color: chartreuse;
+.mycontainer {
   width: 100%;
 }
 
 input {
   display: inline-block;
-  margin: 10px 20px 10px 0;
+  margin: 10px 20px 20px 70px;
   height: 35px;
   width: 240px;
+  font-size: 18px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input::placeholder {
+  color: rgba(10, 4, 4, 0.747);
 }
 button {
   height: 35px;
   width: 100px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .board {
@@ -34,8 +41,7 @@ button {
   height: 250px;
   position: relative;
   margin: 40px 20px;
-  outline: 2px solid rgba(31, 8, 8, 0.2);
-  background-color: rgb(158, 198, 199);
+  /* background-color: rgba(142, 185, 100, 0.678); */
 }
 img {
   position: absolute;
@@ -47,6 +53,6 @@ img {
   position: absolute;
   font-size: 40px;
   font-weight: bold;
-  bottom: 10%;
+  bottom: 0;
   right: 10%;
 }
