@@ -1,4 +1,5 @@
 const container = document.createElement("div");
+const mycontainer = document.createElement("div");
 container.classList.add("container");
 document.body.prepend(container);
 
@@ -6,9 +7,15 @@ const input = document.createElement("input");
 const button = document.createElement("button");
 button.id = "btn_axtar";
 button.textContent = "Axtar";
-container.append(input, button);
+container.append(input, button, mycontainer);
 
-btn_axtar.addEventListener("click", setCountMoney(input.value));
+let miqdar2;
+btn_axtar.addEventListener("click", () => {
+  mycontainer.innerHTML = "";
+  miqdar2 = setCountMoney(input.value);
+  fillMoney(miqdar2);
+  input.value = "";
+});
 
 function setCountMoney(input_value) {
   let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
@@ -32,13 +39,12 @@ function setCountMoney(input_value) {
   return miqdar;
 }
 
-function fillMoney() {
+function fillMoney(miqdar2) {
   let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
-  let miqdar2 = setCountMoney();
 
   miqdar2.map((value, index) => {
     const board = document.createElement("div");
-    container.append(board);
+    mycontainer.append(board);
     for (let j = 1; j <= value; j++) {
       board.classList.add("board");
       const img = document.createElement("img");
@@ -48,5 +54,3 @@ function fillMoney() {
     }
   });
 }
-
-// document.body.prepend(container);
