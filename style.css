@@ -5,15 +5,22 @@
   text-decoration: none;
   list-style: none;
 }
+body{
+  background-color: rgb(211, 152, 164);
+}
 .container {
   width: 1200px;
   max-width: 90%;
   margin: 40px auto;
 }
+.mycontainer{
+  background-color: chartreuse;
+  width: 100%;
+}
 
 input {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 10px 20px 10px 0;
   height: 35px;
   width: 240px;
 }

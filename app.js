@@ -1,5 +1,6 @@
 const container = document.createElement("div");
 const mycontainer = document.createElement("div");
+mycontainer.classList.add("mycontainer");
 container.classList.add("container");
 document.body.prepend(container);
 
