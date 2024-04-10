@@ -12,32 +12,28 @@ button.id = "btn_axtar";
 button.textContent = "Axtar";
 container.append(input, button, mycontainer);
 
-let miqdar2 = [];
+let return_miqdar = [];
 btn_axtar.addEventListener("click", () => {
   mycontainer.innerHTML = "";
-  miqdar2 = setCountMoney(input.value);
-  fillMoney(miqdar2);
+  return_miqdar = setCountMoney(input.value);
+  fillMoney(return_miqdar);
 });
 
 function setCountMoney(input_value) {
-  let miqdar = [];
-  let k;
+  let pul_emsali = [];
   let sum = input_value;
+  let qismet = 0;
+
   for (let i = 0; i < pullar.length; i++) {
-    k = 0;
-    while (true) {
-      if (sum / pullar[i] >= 1) {
-        sum = sum - pullar[i];
-        k++;
-      } else {
-        break;
-      }
+    qismet = Math.floor(sum / pullar[i]);
+    if (qismet >= 1) {
+      sum = sum - pullar[i] * qismet;
+      pul_emsali.push(qismet);
+    } else {
+      pul_emsali.push(0);
     }
-    miqdar.push(k);
   }
-  console.log(miqdar);
-  console.log(pullar);
-  return miqdar;
+  return pul_emsali;
 }
 
 function fillMoney(miqdar2) {
