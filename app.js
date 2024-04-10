@@ -1,4 +1,5 @@
 let pullar = [500, 200, 100, 50, 20, 10, 5, 1];
+
 const container = document.createElement("div");
 const mycontainer = document.createElement("div");
 mycontainer.classList.add("mycontainer");
@@ -12,32 +13,32 @@ button.id = "btn_axtar";
 button.textContent = "Axtar";
 container.append(input, button, mycontainer);
 
-let return_miqdar = [];
 btn_axtar.addEventListener("click", () => {
   mycontainer.innerHTML = "";
-  return_miqdar = setCountMoney(input.value);
-  fillMoney(return_miqdar);
+  fillMoney(setCountMoney(input.value));
 });
 
 function setCountMoney(input_value) {
+  let bolunen = input_value;
   let pul_emsali = [];
-  let sum = input_value;
   let qismet = 0;
 
   for (let i = 0; i < pullar.length; i++) {
-    qismet = Math.floor(sum / pullar[i]);
+    qismet = Math.floor(bolunen / pullar[i]);
     if (qismet >= 1) {
-      sum = sum - pullar[i] * qismet;
+      bolunen = bolunen - pullar[i] * qismet;
       pul_emsali.push(qismet);
     } else {
       pul_emsali.push(0);
     }
   }
+  console.log(pullar);
+  console.log(pul_emsali);
   return pul_emsali;
 }
 
-function fillMoney(miqdar2) {
-  miqdar2.map((value, index) => {
+function fillMoney(miqdar) {
+  miqdar.map((value, index) => {
     if (value > 0 && value <= 5) {
       const board = document.createElement("div");
       mycontainer.append(board);
