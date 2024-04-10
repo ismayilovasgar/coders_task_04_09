@@ -7,7 +7,7 @@ container.classList.add("container");
 document.body.prepend(container);
 
 const input = document.createElement("input");
-input.placeholder = "Bir mebleg daxil edin...";
+input.placeholder = "Bir Mebleg Daxil Edin...";
 const button = document.createElement("button");
 button.id = "btn_axtar";
 button.textContent = "Axtar";
