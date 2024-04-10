@@ -23,15 +23,16 @@ function setCountMoney(input_value) {
   let pul_emsali = [];
   let qismet = 0;
 
-  for (let i = 0; i < pullar.length; i++) {
-    qismet = Math.floor(bolunen / pullar[i]);
+  pullar.map((eded, indeksi) => {
+    qismet = Math.floor(bolunen / eded);
     if (qismet >= 1) {
-      bolunen = bolunen - pullar[i] * qismet;
+      bolunen = bolunen - eded * qismet;
       pul_emsali.push(qismet);
     } else {
       pul_emsali.push(0);
     }
-  }
+  });
+  
   console.log(pullar);
   console.log(pul_emsali);
   return pul_emsali;
